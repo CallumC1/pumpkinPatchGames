@@ -806,6 +806,14 @@ video {
   background-image: url('/src/assets/hollowed-boxes.svg');
 }
 
+.bg-\[url\(\'\.\/src\/assets\/hollowed-boxes\.svg\'\)\] {
+  background-image: url('./src/assets/hollowed-boxes.svg');
+}
+
+.bg-\[url\(\'\.\.\/src\/assets\/hollowed-boxes\.svg\'\)\] {
+  background-image: url('../src/assets/hollowed-boxes.svg');
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,33 +18,7 @@
     <title>PumpkinPatch Games</title>
 </head>
 <body class="">
-    <nav class=" bg-background-800 h-24 px-10 w-full drop-shadow-xl overflow-hidden">
-
-        <div class="contianer max-w-6xl mx-auto flex justify-between items-center h-full w-full">
-            <a href="#" class="">
-                <img src="src/assets/PumpkinPatchLogo.png" alt="" class="w-20 object-center">
-            </a>
-            
-            <ul class="flex gap-6 text-white font-semibold text-base">
-                <li><a href="" class="border-b-2 border-white">Home</a></li>
-                <li><a href="">Catalogue</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Launcher</a></li>
-            </ul>
-
-            <!-- <div class="flex gap-4 items-center">
-                <a href="" class="text-white text-sm p-4">Login</a>
-                <a href="" class="text-white text-sm p-2 bg-med-purple rounded-full">Sign up</a> -->
-
-                <a href="" class="">
-                    <div class="flex justify-center items-center bg-secondary-500 rounded-full w-10 h-10 ">
-                        <img src="./src/assets/feather-icons/user.svg" alt="" class=" w-6 h-6">
-                    </div>
-                </a>
-            </div>
-        </div>
-    
-    </nav>
+    <?php include 'comps/nav.php'; ?>
 
     <!-- Hero Image Swiper -->
 
@@ -129,7 +103,7 @@
 <section class="my-10">
 
     <div class="w-2/3 h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 mx-auto border-0 border-white rounded-3xl overflow-hidden">
-        <div class="flex bg-[url('/src/assets/hollowed-boxes.svg')] items-center">
+        <div class="flex bg-[url('../src/assets/hollowed-boxes.svg')] items-center">
             <img src="./src/assets/PumpkinPatchLogo.png" alt="" class="w-64 h-auto mx-auto items-center my-auto">
 
         </div>
