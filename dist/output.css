@@ -802,12 +802,9 @@ video {
   background-color: rgb(28 22 39 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/src\/assets\/hollowed-boxes\.svg\'\)\] {
-  background-image: url('/src/assets/hollowed-boxes.svg');
-}
-
-.bg-\[url\(\'\.\/src\/assets\/hollowed-boxes\.svg\'\)\] {
-  background-image: url('./src/assets/hollowed-boxes.svg');
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/src\/assets\/hollowed-boxes\.svg\'\)\] {
