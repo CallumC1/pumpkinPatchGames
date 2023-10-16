@@ -14,7 +14,7 @@ function createFeaturedCard(){
     let gameImg = document.createElement("img");
     
     gameImg.setAttribute("class", "w-full h-full object-cover");
-    gameImg.setAttribute("src", "./src/assets/rustGame.jpg");
+    gameImg.setAttribute("src", "./src/assets/Sprinkle.svg");
 
     let gameTitle = document.createElement("h4");
     gameTitle.setAttribute("class", "text-lg text-white font-semibold")
@@ -45,7 +45,7 @@ function createFeaturedCard(){
 
     // Change Content
 
-    gameImg.setAttribute("src", "./src/assets/rustGame.jpg");
+    gameImg.setAttribute("src", "./src/assets/Sprinkle.svg");
     gameTitle.innerHTML = `${videoGames[getRandomUniqueGame()].title}`;
     gameDesc.innerHTML = `${videoGames[getRandomUniqueGame()].description}`;
 
@@ -78,7 +78,7 @@ function createFeaturedCard(){
 };
 
 window.onload = function() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 7; i++) {
         createFeaturedCard();
     }
 }

@@ -40,10 +40,6 @@
             </div>
         </div>
     </div>
-    
-
-
-
 
 <!-- Games Listing -->
 <section class="relative overflow-hidden bg-secondary-500">
@@ -55,35 +51,7 @@
         <!-- Featured Games Cards -->
         <div class="swiper featuredGamesSwiper h-auto w-full">
             <div class="swiper-wrapper" id="featuredSwiperWrapper">
-                <!-- Element gets duplicated by script -->
-                <!-- <div class="swiper-slide" id="featuredSwiper">
-                    <div class="flex flex-col px-5">
-                        <img src="./src/assets/rustGame.jpg" alt="" class="w-full h-full object-cover">
-        
-                        <h4 class="text-lg text-white font-semibold">Game Title</h4>
-                        <p class="text-md text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit maxime animi molestiae numquam dignissimos vel.</p>
-
-                        <span class="mt-4">
-                            <p class="text-white text-xs">
-                                Feedback
-                            </p>
-                            <p class="text-white text-xs" >
-                                65% positive
-                            </p>
-                            <p class="text-white text-xs">
-                                12 reviews
-                            </p>
-                        </span>
-
-                        <a class="group flex flex-row items-center mt-10 cursor-pointer text-white" href="#">
-                            <p class="group mr-1 group-hover:mr-2 transition-all text-md">View More</p>
-                            <i class="w-6 " data-feather="arrow-right"></i>
-                        </a>
-
-                
-                    </div>
-                </div> -->
-                <!-- End of duplicated element --> 
+                <!-- Elements generated from index.js -->
             </div>
 
             <div class="swiper-pagination-featured block mx-auto w-full"></div>
@@ -94,8 +62,6 @@
         </div>
         
     </div>
-
-    <!-- <img src="./src/assets/cobweb.png" alt="pumpkin and cobweb background" class="absolute -top-32 -right-20 w-[30rem]"> -->
 
 </section>
 
@@ -176,19 +142,6 @@
 
 
 
-
-<script>
-    // Duplicate Featured Games Node x times.
-    // for (let i = 0; i < 5; i++) {
-    //     const node = document.getElementById("featuredSwiper");
-    //     const clone = node.cloneNode(true);
-
-    //     document.getElementById("featuredSwiperWrapper").appendChild(clone);
-
-    //     // Get rand img. Change element
-        
-    // }
-</script>
 
 <script>
     feather.replace();
