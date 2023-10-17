@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,33 +18,7 @@
     <title>PumpkinPatch Games</title>
 </head>
 <body class="">
-    <nav class=" bg-background-800 h-24 px-10 w-full drop-shadow-xl overflow-hidden">
-
-        <div class="contianer max-w-6xl mx-auto flex justify-between items-center h-full w-full">
-            <a href="#" class="">
-                <img src="src/assets/PumpkinPatchLogo.png" alt="" class="w-20 object-center">
-            </a>
-            
-            <ul class="flex gap-6 text-white font-semibold text-base">
-                <li><a href="" class="border-b-2 border-white">Home</a></li>
-                <li><a href="">Catalogue</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Launcher</a></li>
-            </ul>
-
-            <!-- <div class="flex gap-4 items-center">
-                <a href="" class="text-white text-sm p-4">Login</a>
-                <a href="" class="text-white text-sm p-2 bg-med-purple rounded-full">Sign up</a> -->
-
-                <a href="" class="">
-                    <div class="flex justify-center items-center bg-secondary-500 rounded-full w-10 h-10 ">
-                        <img src="./src/assets/feather-icons/user.svg" alt="" class=" w-6 h-6">
-                    </div>
-                </a>
-            </div>
-        </div>
-    
-    </nav>
+    <?php include 'components/navbar.php'; ?>
 
     <!-- Hero Image Swiper -->
 
@@ -66,10 +40,6 @@
             </div>
         </div>
     </div>
-    
-
-
-
 
 <!-- Games Listing -->
 <section class="relative overflow-hidden bg-secondary-500">
@@ -81,35 +51,7 @@
         <!-- Featured Games Cards -->
         <div class="swiper featuredGamesSwiper h-auto w-full">
             <div class="swiper-wrapper" id="featuredSwiperWrapper">
-                <!-- Element gets duplicated by script -->
-                <!-- <div class="swiper-slide" id="featuredSwiper">
-                    <div class="flex flex-col px-5">
-                        <img src="./src/assets/rustGame.jpg" alt="" class="w-full h-full object-cover">
-        
-                        <h4 class="text-lg text-white font-semibold">Game Title</h4>
-                        <p class="text-md text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit maxime animi molestiae numquam dignissimos vel.</p>
-
-                        <span class="mt-4">
-                            <p class="text-white text-xs">
-                                Feedback
-                            </p>
-                            <p class="text-white text-xs" >
-                                65% positive
-                            </p>
-                            <p class="text-white text-xs">
-                                12 reviews
-                            </p>
-                        </span>
-
-                        <a class="group flex flex-row items-center mt-10 cursor-pointer text-white" href="#">
-                            <p class="group mr-1 group-hover:mr-2 transition-all text-md">View More</p>
-                            <i class="w-6 " data-feather="arrow-right"></i>
-                        </a>
-
-                
-                    </div>
-                </div> -->
-                <!-- End of duplicated element --> 
+                <!-- Elements generated from index.js -->
             </div>
 
             <div class="swiper-pagination-featured block mx-auto w-full"></div>
@@ -121,15 +63,13 @@
         
     </div>
 
-    <!-- <img src="./src/assets/cobweb.png" alt="pumpkin and cobweb background" class="absolute -top-32 -right-20 w-[30rem]"> -->
-
 </section>
 
 
 <section class="my-10">
 
     <div class="w-2/3 h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 mx-auto border-0 border-white rounded-3xl overflow-hidden">
-        <div class="flex bg-[url('/src/assets/hollowed-boxes.svg')] items-center">
+        <div class="flex bg-[url('../src/assets/hollowed-boxes.svg')] items-center">
             <img src="./src/assets/PumpkinPatchLogo.png" alt="" class="w-64 h-auto mx-auto items-center my-auto">
 
         </div>
@@ -146,19 +86,7 @@
 
 </section>
 
-<!-- Footer -->
-<section class="bg-background-800 flex py-8">
-    <div class="container max-w-6xl grid grid-cols-3 mx-auto">
-        <div class="text-white">
-            <p>Socials Link</p>
-            <p class="text-sm">Twitter</p>
-            <p class="text-sm">Instagram</p>
-            <p class="text-sm">Facebook</p>
-        </div>
-        <div class=""></div>
-        <div class=""></div>
-    </div>
-</section>
+<?php include 'components/footer.php'; ?>
 
 
 <!-- Scripts -->
@@ -214,19 +142,6 @@
 
 
 
-
-<script>
-    // Duplicate Featured Games Node x times.
-    // for (let i = 0; i < 5; i++) {
-    //     const node = document.getElementById("featuredSwiper");
-    //     const clone = node.cloneNode(true);
-
-    //     document.getElementById("featuredSwiperWrapper").appendChild(clone);
-
-    //     // Get rand img. Change element
-        
-    // }
-</script>
 
 <script>
     feather.replace();
