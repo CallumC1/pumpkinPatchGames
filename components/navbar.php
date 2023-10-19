@@ -6,7 +6,7 @@
     </a>
     
     <ul class="flex gap-6 text-white font-semibold text-base">
-        <li><a href="./" id="-link">Home</a></li>
+        <li><a href="./index" id="-link">Home</a></li>
         <li><a href="./catalogue" id="catalogue-link">Catalogue</a></li>
         <li><a href="#" id="categories-link">Categories</a></li>
         <li><a href="#" id="launcher-link">Launcher</a></li>
@@ -18,7 +18,7 @@
 
         <a href="" class="">
             <div class="flex justify-center items-center bg-secondary-500 rounded-full w-10 h-10 ">
-                <img src="./src/assets/feather-icons/user.svg" alt="" class=" w-6 h-6">
+                <img src="../src/assets/feather-icons/user.svg" alt="" class=" w-6 h-6">
             </div>
         </a>
     </div>

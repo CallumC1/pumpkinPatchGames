@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="../dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <title>PumpkinPatch Games</title>
 </head>
 <body class="">
-    <?php include 'components/navbar.php'; ?>
+    <?php include '../components/navbar.php'; ?>
 
     <!-- Hero Image Swiper -->
 
@@ -26,15 +26,15 @@
         <div class="swiper heroSwiper h-full w-full">
             <div class="swiper-wrapper flex">
                 <div class="swiper-slide w-full h-auto ">
-                    <img src="./src/assets/valBanner.jpg" alt="" 
+                    <img src="../src/assets/valBanner.jpg" alt="" 
                     class="w-full h-full object-cover object-center">
                 </div>
                 <div class="swiper-slide ">
-                    <img src="./src/assets/cs2BanenrImage.webp" alt="" 
+                    <img src="../src/assets/cs2BanenrImage.webp" alt="" 
                     class="w-full h-full object-cover object-center ">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./src/assets/starfieldBanner.jpg" alt="" 
+                    <img src="../src/assets/starfieldBanner.jpg" alt="" 
                     class="w-full h-full object-cover object-center">
                 </div>
             </div>
@@ -70,7 +70,7 @@
 
     <div class="w-2/3 h-auto lg:h-96 grid grid-cols-1 lg:grid-cols-2 mx-auto border-0 border-white rounded-3xl overflow-hidden">
         <div class="flex bg-[url('../src/assets/hollowed-boxes.svg')] items-center">
-            <img src="./src/assets/PumpkinPatchLogo.png" alt="" class="w-64 h-auto mx-auto items-center my-auto">
+            <img src="../src/assets/PumpkinPatchLogo.png" alt="" class="w-64 h-auto mx-auto items-center my-auto">
 
         </div>
         <div class="bg-accent-700 w-full flex flex-col px-16 text-center items-center justify-center gap-5 lg:gap-16">
@@ -86,12 +86,12 @@
 
 </section>
 
-<?php include 'components/footer.php'; ?>
+<?php include '../components/footer.php'; ?>
 
 
 <!-- Scripts -->
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="../main.js"></script>
 
 <!-- Hero Swiper -->
 
