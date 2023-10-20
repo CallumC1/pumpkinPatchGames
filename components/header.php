@@ -39,30 +39,34 @@
 
 
 <!-- Mobile Nav -->
-<div class="md:hidden  bg-background-800 h-16 px-5 w-full drop-shadow-xl overflow-hidden  flex justify-end align-middle" >
-    <img src="../src/assets/feather-icons/menu.svg" alt="" class="w-10 h-10 my-auto cursor-pointer " id="nav-toggle">
+<div class="md:hidden  bg-background-800 h-16 px-5 w-full drop-shadow-xl overflow-hidden  flex justify-between align-middle" >
+    <p class="text-white font-semibold my-auto">PumpkinPatch</p>
+    <img src="../src/assets/feather-icons/menu.svg" alt="" class="w-10 h-10 my-auto cursor-pointer " id="nav-toggle" onclick="toggleMenu()">
 </div>
-<div class="hidden md:hidden mobile-nav bg-background-800 w-3/4 h-40 ">
-
+<div class="absolute hidden md:hidden mobile-nav bg-primary-500 w-full h-screen right-0 z-50">
+    <ul class="flex flex-col gap-6 text-white text-2xl h-full text-center mt-10">
+        <li><a href="./index" id="index-link">Home</a></li>
+        <li><a href="./catalogue" id="catalogue-link">Catalogue</a></li>
+        <li><a href="./categories" id="categories-link">Categories</a></li>
+        <li><a href="./launcher" id="launcher-link">Launcher</a></li>
+    </ul>
 </div>
 
 <script>
+    function toggleMenu() {
+        var menu = document.querySelector('.mobile-nav');
+        var body = document.querySelector('body');
 
-const navToggle = document.getElementById('nav-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+            body.style.overflow = 'auto';
 
-navToggle.addEventListener('click', function () {
-    if (mobileNav.classList.contains("hidden") {
-        mobileNav.classList.remove("hidden");
-        else {
-            mobileNav.classList.add("hidden");
-
+        } else {
+            menu.style.display = 'block';
+            body.style.overflow = 'hidden';
         }
-    })
-});
-
+    }
 </script>
-
 
 
 <script>
