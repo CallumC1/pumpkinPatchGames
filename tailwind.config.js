@@ -3,9 +3,12 @@ module.exports = {
   content: [
     "./src/../*.{html,js,css,php}",
     './components/**/*.{html,js,php}',
+    './pages/**/*.{html,js,php}',
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
       'white': '#FFFFFF',
       'black': '#000000',
     'background': {

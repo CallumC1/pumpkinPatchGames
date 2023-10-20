@@ -46,8 +46,9 @@ function createFeaturedCard(){
     // Change Content
 
     gameImg.setAttribute("src", "../src/assets/Sprinkle.svg");
-    gameTitle.innerHTML = `${videoGames[getRandomUniqueGame()].title}`;
-    gameDesc.innerHTML = `${videoGames[getRandomUniqueGame()].description}`;
+    let uniqueID = getRandomUniqueGame()
+    gameTitle.innerHTML = `${videoGames[uniqueID].title}`;
+    gameDesc.innerHTML = `${videoGames[uniqueID].description}`;
 
 
     feedbackTitle.innerHTML = "Feedback";
