@@ -16,6 +16,17 @@
     <title>PumpkinPatch Games</title>
 </head>
 
+<?php 
+include("../handlers/setup_database.php");
+
+session_start();
+
+if (!isset($_SESSION["database_setup_done"])) {
+    setup_database();
+    var_dump($_SESSION);
+};
+?> 
+
 <nav class="hidden md:block bg-background-800 h-24 px-10 w-full drop-shadow-xl overflow-hidden">
     <div class="container max-w-6xl mx-auto flex justify-between items-center h-full w-full">
         <a href="#" class="">
@@ -31,7 +42,7 @@
 
         <a
         class="flex justify-center items-center bg-secondary-500 rounded-full w-10 h-10 " 
-        href="./login">
+        href=<?php echo((!isset($_SESSION["username"])) ? "./login" : "./dashboard") ?> >
             <img src="../src/assets/feather-icons/user.svg" alt="" class="w-6 h-6">
         </a>
     </div>
@@ -40,15 +51,27 @@
 
 <!-- Mobile Nav -->
 <div class="md:hidden  bg-background-800 h-16 px-5 w-full drop-shadow-xl overflow-hidden  flex justify-between align-middle" >
-    <p class="text-white font-semibold my-auto">PumpkinPatch</p>
+    <a href="./" class="text-accent-500 font-semibold my-auto">PumpkinPatch</a>
     <img src="../src/assets/feather-icons/menu.svg" alt="" class="w-10 h-10 my-auto cursor-pointer " id="nav-toggle" onclick="toggleMenu()">
 </div>
-<div class="absolute hidden md:hidden mobile-nav bg-primary-500 w-full h-screen right-0 z-50">
+<div class="absolute hidden md:hidden mobile-nav bg-black w-full h-screen right-0 z-50">
     <ul class="flex flex-col gap-6 text-white text-2xl h-full text-center mt-10">
-        <li><a href="./index" id="index-link">Home</a></li>
-        <li><a href="./catalogue" id="catalogue-link">Catalogue</a></li>
-        <li><a href="./categories" id="categories-link">Categories</a></li>
-        <li><a href="./launcher" id="launcher-link">Launcher</a></li>
+        <li><a href="./index">Home</a></li>
+        <li><a href="./catalogue">Catalogue</a></li>
+        <li><a href="./categories">Categories</a></li>
+        <li><a href="./launcher">Launcher</a></li>
+        <!-- If logged in display Dashboard, Else display Login -->
+        <?php
+        
+        if (!isset($_SESSION["username"])) {
+            echo('<li><a href="./login">Login</a></li>');
+        } else {
+            echo('<li><a href="./dashboard">Dashboard</a></li>');
+        };
+
+        ?>
+        
+        
     </ul>
 </div>
 

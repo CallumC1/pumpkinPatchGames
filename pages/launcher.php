@@ -54,7 +54,7 @@
 </section>
 
 <div class="flex flex-col my-10">
-    <p class="text-white text-md lg:text-xl text-center mt-5">Dive into Pumpkin Patch Launcher - Where Fun Grows!</p>
+    <p class="text-white text-md lg:text-xl text-center mt-5 p-3">Dive into Pumpkin Patch Launcher - Where Fun Grows!</p>
 
     <a class="text-white text-center w-56 lg:w-60 py-3 mt-8 bg-gradient-to-r from-accent-800 to-accent-500 mx-auto" href="#whyWouldIHaveADownload">
         Download Now
