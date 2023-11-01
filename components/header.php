@@ -27,6 +27,7 @@ if (!isset($_SESSION["database_setup_done"])) {
 };
 ?> 
 
+
 <nav class="hidden md:block bg-background-800 h-24 px-10 w-full drop-shadow-xl overflow-hidden">
     <div class="container max-w-6xl mx-auto flex justify-between items-center h-full w-full">
         <a href="#" class="">

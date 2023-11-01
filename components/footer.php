@@ -12,11 +12,13 @@
                     <li><a href="" class="text-sm">Store Terms</a></li>
                 </ul>
             </div>
-            <div class="">
+            <div class="flex flex-col">
                 <p class="text-md">Social Links</p>
-                <p class="text-sm">Twitter</p>
-                <p class="text-sm">Instagram</p>
-                <p class="text-sm">Facebook</p>
+                <ul>
+                    <li><a href="https://twitter.com" class="text-sm">Twitter</a></li>
+                    <li><a href="https://instagram.com" class="text-sm">Instagram</a></li>
+                    <li><a href="https://facebook.com" class="text-sm">Facebook</a></li>
+                </ul>
             </div>
             <a href="./index" class="flex items-center justify-center">
                 <img src="../src/assets/PumpkinPatchLogo.png" alt="" class="w-40">

@@ -9,6 +9,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'system-error': '#e74c3c',
+      'system-warn': '#e67e22',
       'white': '#FFFFFF',
       'black': '#000000',
     'background': {
