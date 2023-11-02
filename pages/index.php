@@ -26,24 +26,70 @@
 <!-- Games Listing -->
 <section class="relative overflow-hidden bg-secondary-500">
 
-    <div class="container max-w-7xl mx-auto md:px-0">
+<h1 class="text-5xl font-semibold text-white text-center my-10">Featured Games</h1>
 
-        <h1 class="text-4xl text-center lg:text-7xl lg:p-20 py-10  text-white ">Featured</h1>
-        <!-- <h2 class="text-xl  md:text-center mb-4 text-white font-Rubik">Our spooky selection!</h2> -->
-        <!-- Featured Games Cards -->
-        <div class="swiper featuredGamesSwiper h-auto w-full">
-            <div class="swiper-wrapper" id="featuredSwiperWrapper">
-                <!-- Elements generated from index.js -->
-            </div>
+<?php
+include '../handlers/connect_database.php';
 
-            <div class="swiper-pagination-featured block mx-auto w-full"></div>
-            <div class="flex mx-auto justify-center gap-5 my-5">
-                <img src="../src/assets/feather-icons/arrow-left.svg" alt="arrow left" class="swiper-prev-featured h-5 w-5 lg:h-8 lg:w-8 text-white">
-                <img src="../src/assets/feather-icons/arrow-right.svg" alt="arrow right" class="swiper-next-featured h-5 w-5 lg:h-8 lg:w-8 text-white">
+$connection = connect_to_database();
+
+$query = "SELECT * FROM games";
+
+$stmt = $connection->prepare($query);
+
+if ($stmt):
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+?>
+
+    <div class="swiper featuredGamesSwiper h-auto w-full my-20 max-w-7xl p-10">
+        <div class="swiper-wrapper" id="featuredSwiperWrapper">
+
+        <!-- Card Template -->
+        <?php while ($row = $result->fetch_assoc()):?>
+            <div class="group swiper-slide">
+
+                <!-- Game Thumbnail -->
+                <div class="w-full h-full">
+                    <img class="object-cover aspect-[2/1]" src="<?= $row["game_thumbnail_path"] ?>" alt="">
+                </div>
+
+                <div class="flex flex-col mx-1">
+                    <span class="flex justify-between">
+                        <h4 class="text-lg text-white font-semibold h-7 overflow-hidden"><?= $row["game_title"] ?></h4>
+                        <p class="text-xs text-white bg-accent-500 rounded-sm px-2 my-auto"><?=$row["game_genre"] ?></p>
+                    </span>
+                    <p class="text-xs text-white h-20 overflow-hidden"><?= $row["game_description"] ?></p>
+                    <span class="mt-5">
+                        <p class="text-xs text-white">Feedback</p>
+                        <p class="text-xs text-white"><?=rand(1, 100); ?>% positive</p>
+                        <p class="text-xs text-white"><?=rand(3, 1100) ?> Reviews</p>
+                    </span>
+                    <a class="group flex flex-row items-center mt-10 cursor-pointer text-white">
+                        <p class="group mr-1 group-hover:mr-2 transition-all text-sm">Learn More</p>
+                        <img src="../src/assets/feather-icons/arrow-right.svg" class="w-5">
+                    </a>
+                </div>
             </div>
+            <?php
+                endwhile; 
+                $stmt->close();
+            else:
+                die("Error in prepared statement" . $connection->error);
+            endif
+            ?>
         </div>
         
-    </div>
+        <div class="swiper-pagination-featured block mx-auto w-full"></div>
+        <div class="flex mx-auto justify-center gap-5 my-5">
+            <img src="../src/assets/feather-icons/arrow-left.svg" alt="arrow left" class="swiper-prev-featured h-5 w-5 lg:h-8 lg:w-8 text-white">
+            <img src="../src/assets/feather-icons/arrow-right.svg" alt="arrow right" class="swiper-next-featured h-5 w-5 lg:h-8 lg:w-8 text-white">
+        </div>
+    </div>    
+    
+
+
 
 </section>
 
@@ -69,7 +115,7 @@
 
 <!-- Scripts -->
 
-<script type="text/javascript" src="../main.js"></script>
+<!-- <script type="text/javascript" src="../main.js"></script> -->
 
 <!-- Hero Swiper -->
 

@@ -1,0 +1,19 @@
+INSERT INTO users (username, password, user_type) VALUES("admin", "$2y$10$0.XgEkt608VRyaH5pUMZmel96DAHCgbgHh6MDwtOf78XkXRHd3sZi", "admin");
+INSERT INTO users (username, password) VALUES("user", "$2y$10$aThOQbRhHm0Ie92maxn8Gu2t5.zpud.2.FsM0RmZYprkpD/KiMyeW");
+
+INSERT INTO `games` (`game_title`, `game_description`, `game_price`, `game_thumbnail_path`) VALUES
+('Ark Survival Evolved', 'Stranded on the shores of a mysterious island, you must learn to survive. Use your cunning to kill or tame the primeval creatures roaming the land, and encounter other players to survive, dominate... and escape!', '12.99', '../userUploads/654401adc6344.jpg'),
+('Ratchet & Clank: Rift Apart', 'Blast your way through an interdimensional adventure with Ratchet and Clank – now on PC! Help them take on an evil emperor from another reality as you jump between action-packed worlds and beyond at hyper-speed!', '39.99', '../userUploads/6544023f0a240.jpg'),
+('Terraria', 'Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!', '8.50', '../userUploads/654402ae2c4ce.jpg'),
+('Marvel’s Spider-Man: Miles Morales', 'After the events of Marvel’s Spider-Man Remastered, teenage Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. When a fierce power struggle threatens to destroy his home, Miles must take up the mantle of Spider-Man and own it', '39.99', '../userUploads/654402d766a2a.jpg');
+
+UPDATED
+
+
+INSERT INTO `games` (`game_title`, `game_description`, `game_price`, `game_thumbnail_path`) VALUES
+('Ark Survival Evolved', 'Stranded on the shores of a mysterious island, you must learn to survive. Use your cunning to kill or tame the primeval creatures roaming the land, and encounter other players to survive, dominate... and escape!', '12.99', '../userUploads/654401adc6344.jpg'),
+('Ratchet & Clank: Rift Apart', 'Blast your way through an interdimensional adventure with Ratchet and Clank – now on PC! Help them take on an evil emperor from another reality as you jump between action-packed worlds and beyond at hyper-speed!', '39.99', '../userUploads/6544023f0a240.jpg'),
+('Terraria', 'Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!', '8.50', '../userUploads/654402ae2c4ce.jpg'),
+('Marvel’s Spider-Man: Miles Morales', 'After the events of Marvel’s Spider-Man Remastered, teenage Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. When a fierce power struggle threatens to destroy his home, Miles must take up the mantle of Spider-Man and own it', '39.99', '../userUploads/654402d766a2a.jpg'),
+('Baldur\'s Gate 3', 'Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.', '50.55', '../userUploads/65441acdced3e.jpg'),
+('Cyberpunk 2077', 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.', '29.99', '../userUploads/65441b187e413.jpg');

@@ -4,3 +4,4 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
 ErrorDocument 500 http://localhost/pumpkinpatchgame/pages/db-error.php
+

@@ -44,7 +44,8 @@ function setup_database() {
                 game_title VARCHAR(255) NOT NULL,
                 game_description TEXT NOT NULL,
                 game_price DECIMAL(6, 2) NOT NULL,
-                game_thumbnail_binary VARBINARY(65535)
+                game_thumbnail_path VARCHAR(255),
+                game_genre VARCHAR(255)
             ); ";
 
             if ($connection->query($createGamesTable) === TRUE) {
