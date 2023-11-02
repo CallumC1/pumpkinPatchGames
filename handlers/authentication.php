@@ -12,4 +12,12 @@ function requireAuthentication() {
     }
 }
 
+function getUserType() {
+    if (!empty($_SESSION["user_type"])) {
+        return $_SESSION["user_type"];
+    } else {
+        return "No User Type";
+    }
+}
+
 ?>

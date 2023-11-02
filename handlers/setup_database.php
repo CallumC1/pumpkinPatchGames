@@ -29,13 +29,28 @@ function setup_database() {
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 username VARCHAR(255) NOT NULL,
                 password VARCHAR(255) NOT NULL,
+                user_type VARCHAR(255),
                 created_at TIMESTAMP
-            )";
+            );";
 
             if ($connection->query($createUsersTable) === TRUE) {
                 echo "Table users created successfully.";
             } else {
-                echo "Error creating table: " . $connection->error;
+                echo "Error creating users table: " . $connection->error;
+            }
+
+            $createGamesTable = "CREATE TABLE games (
+                game_id INT PRIMARY KEY AUTO_INCREMENT,
+                game_title VARCHAR(255) NOT NULL,
+                game_description TEXT NOT NULL,
+                game_price DECIMAL(3, 2) NOT NULL,
+                game_thumbnail_binary VARBINARY(65535)
+            ); ";
+
+            if ($connection->query($createGamesTable) === TRUE) {
+                echo "Table games created successfully.";
+            } else {
+                echo "Error creating games table: " . $connection->error;
             }
             
         } else {

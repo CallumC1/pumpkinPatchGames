@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if(password_verify($password, $row["password"])) {
                 // If password matches - Login user.
                 $_SESSION["username"] = $row["username"];
+                $_SESSION["user_type"] = $row["user_type"];
 
                 // For added security against some attacks.
                 session_regenerate_id();                
