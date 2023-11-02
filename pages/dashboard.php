@@ -29,7 +29,11 @@ requireAuthentication();
     <?php if($_SESSION["user_type"] == "admin"):  ?>
             <div class="">
                 <p class="text-white">You are an admin</p>
-                <form action="../handlers/add_game.php" class="bg-system-error w-96 h-80 flex flex-col">
+                <form
+                method="POST"
+                action="../handlers/add_game.php"
+                enctype="multipart/form-data"
+                class="bg-system-error w-96 h-80 flex flex-col">
                     <label for="game_title">Game Title</label>
                     <input type="text" name="game_title" placeholder="Game Title" required>
                     
@@ -37,7 +41,7 @@ requireAuthentication();
                     <input type="text" name="game_description" placeholder="Game Description" required>
                     
                     <label for="game_title">Game Price</label>
-                    <input type="number" name="game_price" min="0" max="999" placeholder="Game Price" required>
+                    <input type="number" name="game_price" min="0" max="999" step="any" value="0" required>
                     
                     <label for="game_img">Game Image</label>
                     <input type="file" name="game_img" accept="image/jpeg, image/jpg" required>

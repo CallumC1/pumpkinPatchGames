@@ -43,7 +43,7 @@ function setup_database() {
                 game_id INT PRIMARY KEY AUTO_INCREMENT,
                 game_title VARCHAR(255) NOT NULL,
                 game_description TEXT NOT NULL,
-                game_price DECIMAL(3, 2) NOT NULL,
+                game_price DECIMAL(6, 2) NOT NULL,
                 game_thumbnail_binary VARBINARY(65535)
             ); ";
 
