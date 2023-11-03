@@ -34,10 +34,6 @@ if($imageFileType == "jpeg"|| $imageFileType == "jpg") {
 }
 
 
-
-
-
-
 // Connect to Db after user authed & valid request methord ensured.
 require "./connect_database.php";
 $connection = connect_to_database();
