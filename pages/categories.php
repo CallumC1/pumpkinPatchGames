@@ -24,7 +24,7 @@ $connection = connect_to_database();
         $result = $stmt->get_result();
 
     while ($row = $result->fetch_assoc()):?>
-        <div class="group">
+        <a class="group" href="./game?game_id=<?=$row["game_id"] ?>">
             <!-- Game Thumbnail -->
             <div class="w-full h-fit">
                 <img class="block object-cover aspect-[4/2]" src="<?= $row["game_thumbnail_path"] ?>" alt="">
@@ -38,7 +38,7 @@ $connection = connect_to_database();
                     <p class="text-xs text-white"><?=rand(3, 1100) ?> Reviews</p>
                 </span>
             </div>
-        </div>
+        </a>
 
         <?php
         endwhile; 
@@ -67,7 +67,7 @@ $connection = connect_to_database();
         $result = $stmt->get_result();
 
     while ($row = $result->fetch_assoc()):?>
-        <div class="group">
+        <a class="group" href="./game?game_id=<?=$row["game_id"] ?>">
             <!-- Game Thumbnail -->
             <div class="w-full h-fit">
                 <img class="block object-cover aspect-[4/2]" src="<?= $row["game_thumbnail_path"] ?>" alt="">
@@ -81,7 +81,7 @@ $connection = connect_to_database();
                     <p class="text-xs text-white"><?=rand(3, 1100) ?> Reviews</p>
                 </span>
             </div>
-        </div>
+        </a>
 
         <?php
         endwhile; 
@@ -110,7 +110,7 @@ $connection = connect_to_database();
         $result = $stmt->get_result();
 
     while ($row = $result->fetch_assoc()):?>
-        <div class="group">
+        <a class="group" href="./game?game_id=<?=$row["game_id"] ?>">
             <!-- Game Thumbnail -->
             <div class="w-full h-fit">
                 <img class="block object-cover aspect-[4/2]" src="<?= $row["game_thumbnail_path"] ?>" alt="">
@@ -124,7 +124,7 @@ $connection = connect_to_database();
                     <p class="text-xs text-white"><?=rand(3, 1100) ?> Reviews</p>
                 </span>
             </div>
-        </div>
+        </a>
 
         <?php
         endwhile; 

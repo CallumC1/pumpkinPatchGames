@@ -17,12 +17,19 @@ if (isset($_GET['game_id'])) {
     include '../handlers/connect_database.php';
 
     $connection = connect_to_database();
+    // This SQL needs securing / preparing
+    // Pretty sure it is secure now.
 
-    $query = "SELECT * FROM games WHERE game_id = $game_id";
+    $query = "SELECT * FROM games WHERE game_id = ?";
 
-    $stmt = $connection->prepare($query);
-    
-    if ($stmt):
+    if ($stmt = $connection->prepare($query)) {
+        $stmt->bind_param("i", $game_id);
+
+        if ($stmt->execute()) {
+            echo ("Selected the game!");
+        }
+        
+
         $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
@@ -33,8 +40,7 @@ if (isset($_GET['game_id'])) {
         $price = $row["game_price"];
 
         $stmt->close();
-    
-    endif;
+    }
     $connection->close();
 ?>
 
