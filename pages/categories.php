@@ -10,9 +10,9 @@ $connection = connect_to_database();
 ?>
 
 <!-- START RPG -->
-<h1 class="text-white text-2xl text-center font-semibold">RPG Genre</h1>
+<h1 class="text-white text-2xl text-center font-semibold mb-5">RPG Genre</h1>
 
-<div class="grid grid-cols-3 gap-5 mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto max-w-7xl">
 
     <?php
     $query = "SELECT * FROM games WHERE game_genre = 'RPG'";
@@ -45,7 +45,7 @@ $connection = connect_to_database();
             $stmt->close();
         else:
             die("Error in prepared statement" . $connection->error);
-        endif
+        endif;
         ?>
 
 </div>
@@ -53,9 +53,9 @@ $connection = connect_to_database();
 <!-- END RPG -->
 
 <!-- START ACTION -->
-<h1 class="text-white text-2xl text-center font-semibold">Action Genre</h1>
+<h1 class="text-white text-2xl text-center font-semibold my-5">Action Genre</h1>
 
-<div class="grid grid-cols-3 gap-5 mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto max-w-7xl">
 
     <?php
     $query = "SELECT * FROM games WHERE game_genre = 'Action'";
@@ -96,9 +96,9 @@ $connection = connect_to_database();
 <!-- END ACTION -->
 
 <!-- START SURVIVAL -->
-<h1 class="text-white text-2xl text-center font-semibold">Survival Genre</h1>
+<h1 class="text-white text-2xl text-center font-semibold my-5">Survival Genre</h1>
 
-<div class="grid grid-cols-3 gap-5 mx-auto max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto max-w-7xl">
 
     <?php
     $query = "SELECT * FROM games WHERE game_genre = 'Survival'";
@@ -131,7 +131,8 @@ $connection = connect_to_database();
             $stmt->close();
         else:
             die("Error in prepared statement" . $connection->error);
-        endif
+        endif;
+        $connection->close();
         ?>
 
 </div>

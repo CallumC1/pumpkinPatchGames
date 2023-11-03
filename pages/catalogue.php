@@ -37,7 +37,7 @@ if ($stmt):
                 <p class="text-xs text-white"><?=rand(1, 100); ?>% positive</p>
                 <p class="text-xs text-white"><?=rand(3, 1100) ?> Reviews</p>
             </span>
-            <a class="group flex flex-row items-center mt-10 cursor-pointer text-white">
+            <a class="group flex flex-row items-center mt-10 cursor-pointer text-white" href="./game?game_id=<?=$row["game_id"] ?>">
                 <p class="group mr-1 group-hover:mr-2 transition-all text-sm">Learn More</p>
                 <img src="../src/assets/feather-icons/arrow-right.svg" class="w-5">
             </a>

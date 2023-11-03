@@ -77,7 +77,8 @@ if ($stmt):
                 $stmt->close();
             else:
                 die("Error in prepared statement" . $connection->error);
-            endif
+            endif;
+            $connection->close();
             ?>
         </div>
         
