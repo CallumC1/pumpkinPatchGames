@@ -61,12 +61,12 @@ $connection->close();
         <div class="flex flex-col justify-center mx-auto gap-y-3 w-full border-l-2 border-black">
             <div class="flex flex-col justify-center mx-auto gap-y-3">
                 <p class="text-xl font-semibold text-orange-600">Mastercard</p>
-                <input type="text" placeholder="Card Number" class=" ml-1 rounded-sm">
+                <input type="text" placeholder="Card Number" class=" ml-1 rounded-sm drop-shadow-sm">
                 <span class="flex justify-between">
-                    <input type="text" placeholder="Expiry Date" class="w-24 ml-1 rounded-sm">
-                    <input type="text" placeholder="CVC" class="w-16 ml-1 rounded-sm">
+                    <input type="text" placeholder="Expiry Date" class="w-24 ml-1 rounded-sm drop-shadow-sm">
+                    <input type="text" placeholder="CVC" class="w-16 ml-1 rounded-sm drop-shadow-sm">
                 </span>
-                <button class="bg-green-700 px-14 py-2 rounded-sm">Pay £<?= $price ?></button>
+                <button class="bg-green-700 drop-shadow-lg px-14 py-2 rounded-sm">Pay £<?= $price ?></button>
             </div>
         </div>
     </div>

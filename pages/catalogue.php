@@ -27,7 +27,7 @@ if ($stmt):
         <!-- Game Thumbnail -->
         <div class="relative w-full h-fit">
             <img class="block object-cover aspect-[4/2]" src="<?= $row["game_thumbnail_path"] ?>" alt="">
-            <p class="absolute top-0 right-0 w-fit bg-accent-500 rounded-bl-md px-2 text-black text-xs"><?=$row["game_genre"] ?></p>
+            <p class="absolute top-0 right-0 w-fit bg-accent-500 rounded-bl-md px-2 text-black font-semibold text-xs"><?=$row["game_genre"] ?></p>
         </div>
         <div class="flex flex-col mx-2">
             <h4 class="text-lg text-white font-semibold h-7 overflow-hidden"><?= $row["game_title"] ?></h4>

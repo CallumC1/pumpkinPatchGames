@@ -45,7 +45,9 @@ if ($addGameStmt = $connection->prepare($query)) {
     $description = $_POST["game_description"];
     $price = $_POST["game_price"];
     $game_thumbnail_path = $newFilePath;
-    $addGameStmt->bind_param("ssds", $title, $description, $price, $game_thumbnail_path);
+    $game_genre = $_POST["game_genre"];
+
+    $addGameStmt->bind_param("ssdss", $title, $description, $price, $game_thumbnail_path, $game_genre);
 
     if ($addGameStmt->execute()) {
         echo "New record created successfully";

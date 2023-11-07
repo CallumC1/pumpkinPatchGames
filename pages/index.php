@@ -48,12 +48,12 @@ if ($stmt):
 
         <!-- Card Template -->
         <?php while ($row = $result->fetch_assoc()):?>
-            <div class="group swiper-slide">
+            <div class="group swiper-slide" >
 
                 <!-- Game Thumbnail -->
-                <div class="w-full h-full">
+                <a class="w-full h-full" href="./game?game_id=<?=$row["game_id"] ?>">
                     <img class="object-cover aspect-[2/1]" src="<?= $row["game_thumbnail_path"] ?>" alt="">
-                </div>
+                </a>
 
                 <div class="flex flex-col mx-1">
                     <span class="flex justify-between">

@@ -39,6 +39,9 @@ requireAuthentication();
                     
                     <label for="game_dexcription">Game Description</label>
                     <input type="text" name="game_description" placeholder="Game Description" required>
+
+                    <label for="game_genre">Game Genre</label>
+                    <input type="string" name="game_genre" placeholder="Game Genre" required>
                     
                     <label for="game_title">Game Price</label>
                     <input type="number" name="game_price" min="0" max="999" step="any" value="0" required>
